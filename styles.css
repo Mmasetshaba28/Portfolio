@@ -484,8 +484,14 @@
             }
 
             .contact-info {
-                grid-template-columns: 1fr;
-            }
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    .contact-item {
+        min-width: 100%;
+        width: 100%;
+    }
 
             .social-media-links {
                 flex-wrap: wrap;
@@ -524,6 +530,15 @@
             #contact h2 {
                 font-size: 1.8rem;
             }
+             .contact-info {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+
+    .contact-item {
+        width: 100%;
+        padding: 1.5rem 1rem;
+    }
         }
 
         /* Smooth scrolling */
