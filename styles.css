@@ -668,37 +668,21 @@
     margin-top: auto;
 }
 
-/* Make project cards and achievement cards consistent */
-.project-card, .achievement-card {
-    min-height: 300px;
-    height: auto;
-}
 
-/* Ensure both grids have same layout */
-.projects-grid, .achievements-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    width: 100%;
-}
-
-/* Responsive Design - Match both sections */
+/* Responsive Design for Achievements */
 @media (max-width: 768px) {
-    .achievements-grid,
-    .projects-grid {
+    .achievements-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
         margin: 0 auto;
     }
 
-    .achievement-card,
-    .project-card {
+    .achievement-card {
         padding: 1.5rem;
-        min-height: 280px;
     }
 
         .achievement-card h3 {
-            font-size: 1.1rem;
-            min-height: 3em;
+            font-size: 1.2rem;
         }
 
         .achievement-card p {
@@ -707,8 +691,7 @@
 }
 
 @media (max-width: 480px) {
-    .achievements-grid,
-    .projects-grid {
+    .achievements-grid {
         grid-template-columns: 1fr;
     }
 
@@ -718,10 +701,5 @@
 
     .section-subtitle {
         font-size: 1rem;
-    }
-
-    .achievement-card,
-    .project-card {
-        min-height: 260px;
     }
 }
