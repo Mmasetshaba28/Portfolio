@@ -829,6 +829,7 @@
 }
 
 /* Responsive Design for Qualifications */
+/**/
 @media (max-width: 768px) {
     .qualifications-timeline::before {
         left: 30px;
