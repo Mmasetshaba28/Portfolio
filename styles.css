@@ -558,16 +558,16 @@
             transform: translateY(0);
         }
 
-/* Achievements Section - Match Project Cards */
+/* Achievements Section */
 #achievements {
     text-align: center;
 }
 
-#achievements h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #00ffff;
-}
+    #achievements h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #00ffff;
+    }
 
 .section-subtitle {
     font-size: 1.1rem;
@@ -580,7 +580,6 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
-    width: 100%;
 }
 
 .achievement-card {
@@ -593,11 +592,6 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    min-height: 300px; /* Match project card height */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Make all cards same height */
 }
 
     .achievement-card:hover {
@@ -622,26 +616,19 @@
     }
 
 .achievement-icon {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
     background: linear-gradient(45deg, #00ffff, #ff0080);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .achievement-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
     color: #00ffff;
-    min-height: 3.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 3em;
 }
 
 .achievement-card p {
@@ -649,25 +636,20 @@
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 4.5em;
 }
 
 .achievement-year {
     display: inline-block;
-    padding: 8px 25px;
+    padding: 6px 20px;
     background: linear-gradient(45deg, #00ffff, #ff0080);
     color: white;
-    border-radius: 25px;
+    border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 1px;
     box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
-    margin-top: auto;
 }
-
 
 /* Responsive Design for Achievements */
 @media (max-width: 768px) {
