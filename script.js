@@ -94,3 +94,24 @@
             const originalText = heroTitle.textContent;
             typeWriter(heroTitle, originalText, 100);
         });
+
+        document.querySelectorAll('.achievement-card').forEach(card => {
+            card.addEventListener('click', function () {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        document.querySelectorAll('.achievement-icon').forEach(icon => {
+            icon.style.transition = 'transform 0.3s ease';
+
+            icon.parentElement.addEventListener('mouseenter', () => {
+                icon.style.transform = 'scale(1.1) rotate(5deg)';
+            });
+
+            icon.parentElement.addEventListener('mouseleave', () => {
+                icon.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
