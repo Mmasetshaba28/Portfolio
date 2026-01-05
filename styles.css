@@ -685,3 +685,189 @@
         font-size: 1rem;
     }
 }
+/* Qualifications Section */
+#qualifications {
+    text-align: center;
+}
+
+    #qualifications h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #00ffff;
+    }
+
+.qualifications-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+    /* Timeline vertical line */
+    .qualifications-timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(to bottom, #00ffff, #ff0080);
+        border-radius: 3px;
+    }
+
+.qualification-card {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    margin: 2rem 0;
+    position: relative;
+    width: calc(50% - 40px);
+    text-align: left;
+}
+
+    /* Alternate sides for timeline effect */
+    .qualification-card:nth-child(odd) {
+        margin-left: auto;
+    }
+
+    .qualification-card:nth-child(even) {
+        margin-right: auto;
+    }
+
+    /* Timeline dots */
+    .qualification-card::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #00ffff, #ff0080);
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    .qualification-card:nth-child(odd)::before {
+        left: -50px;
+    }
+
+    .qualification-card:nth-child(even)::before {
+        right: -50px;
+    }
+
+    .qualification-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 255, 255, 0.2);
+        border-color: #00ffff;
+    }
+
+    .qualification-card.current {
+        border: 2px solid #00ffff;
+        box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+    }
+
+.qualification-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #00ffff, #ff0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.qualification-year {
+    display: inline-block;
+    padding: 5px 15px;
+    background: linear-gradient(45deg, #00ffff, #ff0080);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.qualification-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #00ffff;
+}
+
+.qualification-type {
+    color: #ff0080;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.qualification-card p {
+    color: #aaa;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.qualification-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(0, 255, 255, 0.1);
+    color: #00ffff;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+/* Responsive Design for Qualifications */
+@media (max-width: 768px) {
+    .qualifications-timeline::before {
+        left: 30px;
+    }
+
+    .qualification-card {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+        margin-right: 0 !important;
+    }
+
+        .qualification-card::before {
+            left: -40px !important;
+            right: auto !important;
+        }
+
+        .qualification-card h3 {
+            font-size: 1.2rem;
+        }
+}
+
+@media (max-width: 480px) {
+    .qualification-card {
+        padding: 1.5rem;
+        margin-left: 45px !important;
+        width: calc(100% - 45px);
+    }
+
+        .qualification-card::before {
+            left: -35px !important;
+            width: 15px;
+            height: 15px;
+        }
+
+    .qualification-year {
+        font-size: 0.85rem;
+    }
+
+    .qualification-card h3 {
+        font-size: 1.1rem;
+    }
+}
