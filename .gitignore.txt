@@ -1,0 +1,16 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node (if you use it)
+node_modules/
+npm-debug.log*
+
+# VS Code
+.vscode/
