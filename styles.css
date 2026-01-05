@@ -558,16 +558,16 @@
             transform: translateY(0);
         }
 
-/* Achievements Section */
+/* Achievements Section - Match Project Cards */
 #achievements {
     text-align: center;
 }
 
-    #achievements h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        color: #00ffff;
-    }
+#achievements h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00ffff;
+}
 
 .section-subtitle {
     font-size: 1.1rem;
@@ -580,6 +580,7 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    width: 100%;
 }
 
 .achievement-card {
@@ -592,6 +593,11 @@
     text-align: center;
     position: relative;
     overflow: hidden;
+    min-height: 300px; /* Match project card height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Make all cards same height */
 }
 
     .achievement-card:hover {
@@ -616,19 +622,26 @@
     }
 
 .achievement-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
     background: linear-gradient(45deg, #00ffff, #ff0080);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .achievement-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     color: #00ffff;
-    min-height: 3em;
+    min-height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .achievement-card p {
@@ -636,35 +649,56 @@
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    min-height: 4.5em;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .achievement-year {
     display: inline-block;
-    padding: 6px 20px;
+    padding: 8px 25px;
     background: linear-gradient(45deg, #00ffff, #ff0080);
     color: white;
-    border-radius: 20px;
+    border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 1px;
     box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+    margin-top: auto;
 }
 
-/* Responsive Design for Achievements */
+/* Make project cards and achievement cards consistent */
+.project-card, .achievement-card {
+    min-height: 300px;
+    height: auto;
+}
+
+/* Ensure both grids have same layout */
+.projects-grid, .achievements-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Responsive Design - Match both sections */
 @media (max-width: 768px) {
-    .achievements-grid {
+    .achievements-grid,
+    .projects-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
         margin: 0 auto;
     }
 
-    .achievement-card {
+    .achievement-card,
+    .project-card {
         padding: 1.5rem;
+        min-height: 280px;
     }
 
         .achievement-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            min-height: 3em;
         }
 
         .achievement-card p {
@@ -673,7 +707,8 @@
 }
 
 @media (max-width: 480px) {
-    .achievements-grid {
+    .achievements-grid,
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 
@@ -683,5 +718,10 @@
 
     .section-subtitle {
         font-size: 1rem;
+    }
+
+    .achievement-card,
+    .project-card {
+        min-height: 260px;
     }
 }
