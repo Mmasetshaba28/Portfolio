@@ -162,6 +162,82 @@
             color: #aaa;
             line-height: 1.8;
         }
+/* Hero Section Two Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cta-button.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #00ffff;
+    color: #00ffff;
+}
+
+    .cta-button.secondary:hover {
+        background: rgba(0, 255, 255, 0.2);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+    }
+
+/* CV Download in Contact Section */
+.cv-download-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.cv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 35px;
+    background: linear-gradient(45deg, #00ffff, #ff0080);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
+}
+
+    .cv-download-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 255, 255, 0.4);
+    }
+
+    .cv-download-btn i {
+        font-size: 1.3rem;
+    }
+
+.cv-note {
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-button, .cta-button.secondary {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    .cv-download-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
 
         .cta-button {
             display: inline-block;
